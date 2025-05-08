@@ -1,8 +1,19 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "motion/react";
 
 export default function EmojiWrap() {
     return (
-        <div className="emoji-wrap">
+        <motion.div
+            className="emoji-wrap"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+                duration: 1,
+                ease: [0, 0.71, 0.2, 1.01],
+            }}
+        >
             <Image
                 className="love"
                 src="/images/emoji/love.png"
@@ -59,6 +70,6 @@ export default function EmojiWrap() {
                 width={140}
                 height={140}
             />
-        </div>
+        </motion.div>
     );
 }
