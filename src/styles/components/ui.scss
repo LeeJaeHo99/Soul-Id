@@ -124,6 +124,136 @@ header {
 .title-component{
     margin-bottom: 40px;
     font-family: "bnv";
-    font-size: 36px;
+    font-size: 48px;
     color: $white;
+}
+
+.type-desc{
+    width: 90%;
+    height: calc(100% - 140px);
+    padding: 40px;
+    background-color: $white;
+    border-radius: 24px;
+
+    .type-btn-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 60px;
+
+        .type-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 20%;
+            height: 40px;
+            background-color: $gray-light;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &.active{
+                span{
+                    font-size: 15px;
+                    opacity: 1;
+                }
+                span:not(.vs){
+                    color: $secondary;
+                }
+            }
+            &:hover{
+                box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+
+                span{
+                    opacity: 0.7;
+                }
+            }
+            span{
+                font-family: "bnv";
+                font-size: 14px;
+                color: $black;
+                opacity: 0.3;
+                transition: all 0.2s ease-in-out;
+            }
+            .vs{
+                color: $tertiary;
+            }
+        }
+    }
+    .type-item-wrap{
+        width: 100%;
+        height: 100%;
+
+        .title{
+            margin-bottom: 32px;
+            font-family: "tages";
+            font-size: 32px;
+            color: $secondary;
+
+            .en{
+                font-size: 48px;
+            }
+            .ko{
+                margin-left: 10px;
+                font-family: "p-medium";
+                font-size: 18px;
+                color: $gray;
+            }
+        }
+        .content-wrap{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 56px;
+            width: 100%;
+            margin-bottom: 32px;
+
+            img{
+                border-radius: 12px;
+            }
+            .text-wrap{
+                > div{
+                    h4{
+                        margin-bottom: 16px;
+                        font-family: "p-bold";
+                        font-size: 28px;
+                    }
+                    p{
+                        font-family: "p-medium";
+                        font-size: 18px;
+                        color: $gray;
+                        line-height: 1.5;
+                    }
+                }
+                .good{
+                    margin-bottom: 40px;
+
+                    h4{
+                        color: $primary;
+                    }
+                }
+                .bad{
+                    h4{
+                        color: $tertiary;
+                    }
+                }
+            }
+        }
+        .btn-wrap{
+            display: flex;
+            justify-content: flex-end;
+
+            button{
+                font-family: "p-medium";
+                font-size: 16px;
+                color: $gray;
+                transition: all 0.2s ease-in-out;
+
+                &:hover{
+                    color: $secondary;
+                }
+            }
+        }
+    }
 }

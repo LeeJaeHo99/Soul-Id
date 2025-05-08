@@ -6,3 +6,16 @@ export type ButtonProps = {
 export type TitleProps = {
     title: string;
 };
+
+export type TypeBtnProps = {
+    active: number;
+    handleActive: (index: number) => void;
+    resetIsNext: () => void;
+};
+
+export type TypeItemProps = {
+    active: number;
+    isNext: number;
+    clickNext: () => void;
+    clickPrev: () => void;
+};
