@@ -52,6 +52,13 @@ export default function EmojiWrap() {
                 width={140}
                 height={140}
             />
+            <Image
+                className="mad"
+                src="/images/emoji/mad.png"
+                alt="mad"
+                width={140}
+                height={140}
+            />
         </div>
     );
 }

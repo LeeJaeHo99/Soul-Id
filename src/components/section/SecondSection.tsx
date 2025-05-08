@@ -3,9 +3,9 @@ import TypeDesc from "../ui/TypeDesc/TypeDesc";
 
 export default function SecondSection() {
     return (
-        <section className="sectioin second-section">
+        <section className="sectioin sub-section second-section">
             <div className="inner start column">
-                <Title title="유형 종류 확인하기" />
+                <Title title="구분 종류 확인하기" />
                 <TypeDesc />
             </div>
         </section>

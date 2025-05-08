@@ -8,6 +8,10 @@
     overflow: hidden;
 }
 
+.sub-section{
+    padding-top: 120px;
+}
+
 .main-section {
     .title {
         h2 {
@@ -22,9 +26,17 @@
 }
 
 .second-section{
-    padding-top: 120px;
+    background-color: $quinary;
 
     .inner{
         align-items: center;
     }
+}
+
+.third-section{
+    background-color: $secondary;
+}
+
+.forth-section{
+    background-color: $quaternary;
 }

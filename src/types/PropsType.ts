@@ -19,3 +19,11 @@ export type TypeItemProps = {
     clickNext: () => void;
     clickPrev: () => void;
 };
+
+export type CodeDescItemProps = {
+    item: {
+        code: string;
+        animal: string;
+        desc: string;
+    };
+};

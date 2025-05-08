@@ -6,4 +6,10 @@ export type PersonalityType = {
     good2: string;
     bad1: string;
     bad2: string;
-}[]
+}[];
+
+export type SoulIdType = {
+    code: string;
+    animal: string;
+    desc: string;
+};
