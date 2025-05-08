@@ -359,3 +359,38 @@ header {
 .next-btn {
     margin-left: 24px;
 }
+
+.quiz-notice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 55%;
+    height: 40%;
+    padding: 40px;
+    background-color: $white;
+    border-radius: 24px;
+    
+    h2{
+        margin-bottom: 72px;
+        font-family: "bnv";
+        font-size: 38px;
+        text-align: center;
+    }
+    p{
+        font-family: "p-medium";
+        font-size: 20px;
+        color: $gray;
+        line-height: 1.6;
+        letter-spacing: -0.6px;
+    }
+    button{
+        position: absolute;
+        top: 5%;
+        right: 3%;
+        font-family: "p-bold";
+        font-size: 18px;
+        color: $tertiary;
+    }
+}

@@ -3,6 +3,11 @@ export type ButtonProps = {
     text: string;
 };
 
+export type MainTitleProps = {
+    top: string;
+    bottom: string;
+};
+
 export type TitleProps = {
     title: string;
 };

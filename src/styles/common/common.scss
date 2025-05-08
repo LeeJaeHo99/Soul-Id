@@ -3,3 +3,14 @@
     backdrop-filter: blur(10px);
     box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.1882352941);
 }
+
+.main-title{
+    h2{
+        font-family: "bnv";
+        font-size: 58px;
+        color: #f5f7ff;
+        letter-spacing: 2px;
+        line-height: 1.3;
+        text-align: center;
+    }
+}
