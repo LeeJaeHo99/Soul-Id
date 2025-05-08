@@ -1,7 +1,10 @@
+import MainSection from "@/components/section/MainSection";
+import SecondSection from "@/components/section/SecondSection";
 export default function Home() {
-  return (
-    <div>
-      <h1>123</h1>
-    </div>
-  );
+    return (
+        <div>
+            <MainSection />
+            <SecondSection />
+        </div>
+    );
 }

@@ -1,16 +1,24 @@
 @font-face {
     font-family: 'p-bold';
-    src: url('/fonts/Pretendard-Bold.otf') format('otf');
+    src: url('/fonts/Pretendard/Pretendard-Bold.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'p-medium';
-    src: url('/fonts/Pretendard-Medium.otf') format('otf');
+    src: url('/fonts/Pretendard/Pretendard-Medium.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'p-thin';
-    src: url('/fonts/Pretendard-Thin.otf') format('otf');
+    src: url('/fonts/Pretendard/Pretendard-Thin.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'tages';
+    src: url('/fonts/Tagesschrift/Tagesschrift-Regular.ttf') format('truetype');
+}
 
+@font-face {
+    font-family: 'bnv';
+    src: url("/fonts/bnv/BnviitLasikOTF.otf") format('opentype');
+}

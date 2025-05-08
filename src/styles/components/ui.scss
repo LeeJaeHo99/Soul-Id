@@ -1,0 +1,129 @@
+@use "../common/color.scss" as *;
+@use "../common/keyframes.scss" as *;
+
+.inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+
+    &.center {
+        justify-content: center;
+    }
+    &.between {
+        justify-content: space-between;
+    }
+    &.start {
+        justify-content: flex-start;
+    }
+    &.end {
+        justify-content: flex-end;
+    }
+    &.column {
+        flex-direction: column;
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 80px;
+
+    h1 {
+        font-family: "tages";
+        font-size: 36px;
+        color: $white;
+    }
+}
+
+.button{
+    min-width: 160px;
+    height: 50px;
+    max-height: 50px;
+    padding: 14px;
+    background-color: $white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+    &:hover{
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+        span{
+            font-size: 19px;
+            color: $tertiary;
+        }
+    }
+    span{
+        font-family: "p-medium";
+        font-size: 18px;
+        color: $gray;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.emoji-wrap {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    padding-top: 80px;
+
+    img {
+        position: absolute;
+        animation: emoji-bounce-rotate 5s infinite ease-in-out;
+    }
+    .rainbow {
+        top: 15%;
+        left: 0%;
+        transform: rotate(-5deg);
+        animation-delay: 0s;
+    }
+    .ghost {
+        top: 5%;
+        right: 0%;
+        transform: rotate(5deg);
+        animation-delay: 0.3s;
+    }
+    .love {
+        top: 70%;
+        right: 20%;
+        transform: rotate(5deg);
+        animation-delay: 0.6s;
+    }
+    .cherry {
+        top: 50%;
+        right: 40%;
+        transform: rotate(5deg);
+        animation-delay: 0.9s;
+    }
+    .rock {
+        top: 30%;
+        right: -15%;
+        transform: rotate(5deg);
+        animation-delay: 1.2s;
+    }
+    .devil {
+        top: 60%;
+        right: 80%;
+        transform: rotate(5deg);
+        animation-delay: 1.5s;
+    }
+    .sad {
+        top: 27%;
+        right: 33%;
+        transform: rotate(5deg);
+        animation-delay: 1.8s;
+    }
+}
+
+.title-component{
+    margin-bottom: 40px;
+    font-family: "bnv";
+    font-size: 36px;
+    color: $white;
+}

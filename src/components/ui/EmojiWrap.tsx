@@ -1,0 +1,57 @@
+import Image from "next/image";
+
+export default function EmojiWrap() {
+    return (
+        <div className="emoji-wrap">
+            <Image
+                className="love"
+                src="/images/emoji/love.png"
+                alt="love"
+                width={180}
+                height={180}
+            />
+            <Image
+                className="rainbow"
+                src="/images/emoji/rainbow.png"
+                alt="rainbow"
+                width={280}
+                height={280}
+            />
+            <Image
+                className="ghost"
+                src="/images/emoji/ghost.png"
+                alt="ghost"
+                width={220}
+                height={220}
+            />
+            <Image
+                className="rock"
+                src="/images/emoji/rock.png"
+                alt="rock"
+                width={180}
+                height={180}
+            />
+            <Image
+                className="cherry"
+                src="/images/emoji/cherry.png"
+                alt="cherry"
+                width={140}
+                height={140}
+            />
+            <Image
+                className="devil"
+                src="/images/emoji/devil.png"
+                alt="devil"
+                width={160}
+                height={160}
+            />
+            <Image
+                className="sad"
+                src="/images/emoji/sad.png"
+                alt="sad"
+                width={140}
+                height={140}
+            />
+        </div>
+    );
+}
