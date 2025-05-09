@@ -7,7 +7,6 @@ import Image from "next/image";
 
 export default function CodeDesc() {
     const [view, setView] = useState(0);
-    console.log(view);
     const onClickNext = () => {
         if (view === soulIdData.length - 3) return;
         setView((prev) => prev + 1);

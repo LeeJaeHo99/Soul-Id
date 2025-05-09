@@ -13,3 +13,14 @@ export type SoulIdType = {
     animal: string;
     desc: string;
 };
+
+export type ResultStore = {
+    SO: number;
+    setSO: (SO: number) => void;
+    OP: number;
+    setOP: (OP: number) => void;
+    AD: number;
+    setAD: (AD: number) => void;
+    HP: number;
+    setHP: (HP: number) => void;
+};

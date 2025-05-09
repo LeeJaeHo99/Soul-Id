@@ -5,9 +5,9 @@ export default function CodeDescItem({ item }: CodeDescItemProps) {
     return (
         <div className="code-desc">
             <Image
-                src={`/images/type/ride.png`}
+                src={`/images/animal/${item.code}.png`}
                 width={160}
-                height={160}
+                height={180}
                 alt={"123"}
             />
             <h3>{item.animal}</h3>

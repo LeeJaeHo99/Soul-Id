@@ -394,3 +394,61 @@ header {
         color: $tertiary;
     }
 }
+
+.quiz-start--btn{
+    font-family: "bnv";
+    font-size: 48px;
+    color: $white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        font-size: 52px;
+    }
+}
+
+.quiz-text{
+    width: 100%;
+    margin-bottom: 32px;
+    font-family: "p-bold";
+    font-size: 32px;
+    color: $white;
+    text-align: center;
+}
+
+.quiz-btn--wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    button{
+        font-family: "p-bold";
+        font-size: 18px;
+        color: $white;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover{
+            font-size: 19px;
+            text-shadow: 0 0 6px #00000010;
+        }
+        &:nth-child(1){
+            color: $secondary;
+        }
+        &:nth-child(2){
+            color: $secondary;
+            opacity: 0.7;
+        }
+        &:nth-child(3){
+            color: $gray;
+        }
+        &:nth-child(4){
+            color: $tertiary;
+            opacity: 0.7;
+        }
+        &:nth-child(5){
+            color: $tertiary;
+        }
+    }
+}
