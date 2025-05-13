@@ -360,7 +360,7 @@ header {
     margin-left: 24px;
 }
 
-.quiz-notice{
+.quiz-notice {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -371,21 +371,21 @@ header {
     padding: 40px;
     background-color: $white;
     border-radius: 24px;
-    
-    h2{
+
+    h2 {
         margin-bottom: 72px;
         font-family: "bnv";
         font-size: 38px;
         text-align: center;
     }
-    p{
+    p {
         font-family: "p-medium";
         font-size: 20px;
         color: $gray;
         line-height: 1.6;
         letter-spacing: -0.6px;
     }
-    button{
+    button {
         position: absolute;
         top: 5%;
         right: 3%;
@@ -395,60 +395,141 @@ header {
     }
 }
 
-.quiz-start--btn{
+.quiz-start--btn {
     font-family: "bnv";
     font-size: 48px;
     color: $white;
+    text-align: center;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 
-    &:hover{
+    &:hover {
         font-size: 52px;
     }
 }
 
-.quiz-text{
-    width: 100%;
-    margin-bottom: 32px;
-    font-family: "p-bold";
-    font-size: 32px;
-    color: $white;
-    text-align: center;
+.quiz-wrap {
+    width: 80%;
+
+    &.none {
+        display: none;
+    }
 }
 
-.quiz-btn--wrap{
+.quiz-text--wrap {
+    .quiz-num {
+        margin-bottom: 24px;
+        font-family: 'p-medium';
+        font-size: 18px;
+        color: $gray;
+    }
+    .quiz-text {
+        width: 100%;
+        margin-bottom: 60px;
+        font-family: "p-bold";
+        font-size: 32px;
+        color: $white;
+        text-align: center;
+    }
+}
+
+.quiz-text--done{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+
+    p{
+        margin-bottom: 24px;
+        font-family: "bnv";
+        font-size: 32px;
+        color: $white;
+        text-align: center;
+        line-height: 1.4;
+        letter-spacing: 1px;
+    }
+    button{
+        border-radius: 4px;
+        font-family: "p-bold";
+        font-size: 16px;
+        color: $black;
+        text-align: center;
+    }
+}
+
+
+.quiz-btn--wrap {
+    display: flex;
+    align-items: flex-end;
     justify-content: center;
     gap: 16px;
 
-    button{
-        font-family: "p-bold";
-        font-size: 18px;
-        color: $white;
+    .quiz-btn--wrap--item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 16px;
+        width: 14%;
         cursor: pointer;
-        transition: all 0.2s ease-in-out;
 
-        &:hover{
-            font-size: 19px;
-            text-shadow: 0 0 6px #00000010;
+        &:hover {
+            span {
+                font-size: 18px;
+            }
         }
-        &:nth-child(1){
-            color: $secondary;
+        &:first-child,
+        &:nth-child(2) {
+            span {
+                color: $secondary;
+            }
+            button{
+                border: 3px solid $secondary;
+
+                &:hover {
+                    background-color: $secondary;
+                }
+            }
         }
-        &:nth-child(2){
-            color: $secondary;
-            opacity: 0.7;
+        &:last-child,
+        &:nth-child(4) {
+            span {
+                color: $tertiary;
+            }
+            button{
+                border: 3px solid $tertiary;
+
+                &:hover {
+                    background-color: $tertiary;
+                }
+            }
         }
-        &:nth-child(3){
-            color: $gray;
+        &:nth-child(3) {
+            button {
+                border: 3px solid $gray;
+
+                &:hover {
+                    background-color: $gray;
+                }
+            }
         }
-        &:nth-child(4){
-            color: $tertiary;
-            opacity: 0.7;
+        &:nth-child(2),
+        &:nth-child(4) {
+            button {
+                opacity: 0.5;
+            }
         }
-        &:nth-child(5){
-            color: $tertiary;
+        button {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: #00000010;
+            transition: all 0.2s ease-in-out;
+        }
+        span {
+            font-family: "p-bold";
+            transition: all 0.2s ease-in-out;
         }
     }
 }

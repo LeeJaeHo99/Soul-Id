@@ -47,7 +47,7 @@
 
 .quiz-page{
     position: relative;
-
+    
     .state-bar{
         position: absolute;
         top: 80px;
@@ -56,5 +56,16 @@
         height: 2px;
         background-color: $quaternary;
         transition: width 0.3s ease-in-out;
+    }
+}
+
+.not-found-page{
+    .inner{
+        gap: 24px;
+
+        h2{
+            font-family: "tages";
+            font-size: 36px;
+        }
     }
 }

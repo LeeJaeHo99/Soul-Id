@@ -8,7 +8,7 @@ export default function MainSection() {
             <div className="inner between">
                 <div className="title">
                     <MainTitle top="당신의 솔직한 마음을" bottom="감정해드려요" />
-                    <Button link="test" text="검사하러 가기" />
+                    <Button link="quiz" text="검사하러 가기" />
                 </div>
                 <EmojiWrap />
             </div>

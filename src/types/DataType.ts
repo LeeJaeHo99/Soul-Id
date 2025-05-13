@@ -24,3 +24,18 @@ export type ResultStore = {
     HP: number;
     setHP: (HP: number) => void;
 };
+
+export type QuizStateStore = {
+    quizState: number;
+    setQuizState: () => void;
+};
+
+export type QuizImgType = {
+    code: string;
+    title1: string;
+    title2: string;
+    title3: string;
+    title4?: string;
+    answer1: string;
+    answer2: string;
+};

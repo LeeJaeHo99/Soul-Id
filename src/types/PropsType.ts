@@ -32,8 +32,3 @@ export type CodeDescItemProps = {
         desc: string;
     };
 };
-
-export type QuizProps = {
-    quizState: number;
-    handleQuizState?: () => void;
-};

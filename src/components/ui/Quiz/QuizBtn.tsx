@@ -1,14 +1,18 @@
 "use client";
 
-import { useResultStore } from "@/store/useStore";
-import { QuizProps } from "@/types/PropsType";
-export default function QuizBtn({quizState}: QuizProps) {
+import { useEffect } from "react";
+import { useResultStore, useQuizStateStore } from "@/store/useStore";
+
+export default function QuizBtn() {
     const {SO, setSO, OP, setOP, AD, setAD, HP, setHP} = useResultStore();
     const result = {SO, OP, AD, HP};
+    const {quizState, setQuizState} = useQuizStateStore();
+
+    useEffect(() => {
+        localStorage.setItem("result", JSON.stringify(result));
+    }, [SO, OP, AD, HP]);
 
     const handleClick = (score: number) => {
-        localStorage.setItem("result", JSON.stringify(result));
-
         if (quizState < 5) {
             setSO(score);
         } else if (quizState >= 5 && quizState < 10) {
@@ -20,13 +24,29 @@ export default function QuizBtn({quizState}: QuizProps) {
         }
     };
 
+    const handleQuizState = () => {
+        setQuizState();
+    };
+
     return (
         <div className="quiz-btn--wrap">
-            <button onClick={() => handleClick(3)}>매우 그렇다.</button>
-            <button onClick={() => handleClick(1)}>그런편이다.</button>
-            <button onClick={() => handleClick(0)}>잘모르겠다.</button>
-            <button onClick={() => handleClick(-1)}>그렇지 않은 편이다.</button>
-            <button onClick={() => handleClick(-3)}>매우 그렇지 않다.</button>
+            <div className="quiz-btn--wrap--item" onClick={handleQuizState}>
+                <span>매우 그렇다.</span>
+                <button onClick={() => handleClick(3)}></button>
+            </div>
+            <div className="quiz-btn--wrap--item" onClick={handleQuizState}>
+                <button onClick={() => handleClick(1)}></button>
+            </div>
+            <div className="quiz-btn--wrap--item" onClick={handleQuizState}>
+                <button onClick={() => handleClick(0)}></button>
+            </div>
+            <div className="quiz-btn--wrap--item" onClick={handleQuizState}>
+                <button onClick={() => handleClick(-1)}></button>
+            </div>
+            <div className="quiz-btn--wrap--item" onClick={handleQuizState}>
+                <span>매우 그렇지 않다.</span>
+                <button onClick={() => handleClick(-3)}></button>
+            </div>
         </div>
     );
 }
