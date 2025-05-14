@@ -12,7 +12,13 @@ export default function QuizBtn() {
         localStorage.setItem("result", JSON.stringify(result));
     }, [SO, OP, AD, HP]);
 
+    const handleQuizState = () => {
+        setQuizState();
+    };
+
     const handleClick = (score: number) => {
+        handleQuizState();
+
         if (quizState < 5) {
             setSO(score);
         } else if (quizState >= 5 && quizState < 10) {
@@ -24,26 +30,24 @@ export default function QuizBtn() {
         }
     };
 
-    const handleQuizState = () => {
-        setQuizState();
-    };
+
 
     return (
         <div className="quiz-btn--wrap">
-            <div className="quiz-btn--wrap--item" onClick={handleQuizState}>
+            <div className="quiz-btn--wrap--item">
                 <span>매우 그렇다.</span>
                 <button onClick={() => handleClick(3)}></button>
             </div>
-            <div className="quiz-btn--wrap--item" onClick={handleQuizState}>
+            <div className="quiz-btn--wrap--item">
                 <button onClick={() => handleClick(1)}></button>
             </div>
-            <div className="quiz-btn--wrap--item" onClick={handleQuizState}>
+            <div className="quiz-btn--wrap--item">
                 <button onClick={() => handleClick(0)}></button>
             </div>
-            <div className="quiz-btn--wrap--item" onClick={handleQuizState}>
+            <div className="quiz-btn--wrap--item">
                 <button onClick={() => handleClick(-1)}></button>
             </div>
-            <div className="quiz-btn--wrap--item" onClick={handleQuizState}>
+            <div className="quiz-btn--wrap--item">
                 <span>매우 그렇지 않다.</span>
                 <button onClick={() => handleClick(-3)}></button>
             </div>

@@ -538,7 +538,6 @@ header:has(+ .quiz-page) {
         flex-direction: column;
         gap: 16px;
         width: 14%;
-        cursor: pointer;
 
         &:first-child,
         &:nth-child(2) {

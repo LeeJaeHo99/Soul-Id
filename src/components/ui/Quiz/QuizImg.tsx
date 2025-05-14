@@ -8,7 +8,8 @@ import { useResultStore, useQuizStateStore } from "@/store/useStore";
 export default function QuizImg() {
     const [clickNum, setClickNum] = useState(0);
     const { setQuizState } = useQuizStateStore();
-    const { setSO, setOP, setAD, setHP } = useResultStore();
+    const { SO, OP, AD, HP, setSO, setOP, setAD, setHP } = useResultStore();
+    const result = {SO, OP, AD, HP};
     const handleClick = () => {
         setClickNum(clickNum + 1);
     };
@@ -18,16 +19,20 @@ export default function QuizImg() {
     }, [clickNum]);
 
     useEffect(() => {
-        if(clickNum === 0){
-            setSO(3);
-        }else if(clickNum === 1){
-            setOP(3);
-        }else if(clickNum === 2){
-            setAD(3);
-        }else if(clickNum === 3){
-            setHP(3);
+        localStorage.setItem("result", JSON.stringify(result));
+    }, [SO, OP, AD, HP]);
+
+    const handleClickScore = (score: number) => {
+        if (clickNum === 0) {
+            setSO(score);
+        } else if (clickNum === 1) {
+            setOP(score);
+        } else if (clickNum === 2) {
+            setAD(score);
+        } else if (clickNum === 3) {
+            setHP(score);
         }
-    }, [clickNum, setSO, setOP, setAD, setHP]);
+    };
 
     return (
         <>
@@ -47,10 +52,10 @@ export default function QuizImg() {
                         height={480}
                     />
                     <div className="quiz-img--btn--wrap">
-                        <button onClick={handleClick}>
+                        <button onClick={() => {handleClick(); handleClickScore(3)}}>
                             {quizImgData[clickNum].answer1}
                         </button>
-                        <button onClick={handleClick}>
+                        <button onClick={() => {handleClick(); handleClickScore(-3)}}>
                             {quizImgData[clickNum].answer2}
                         </button>
                     </div>
