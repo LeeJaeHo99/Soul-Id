@@ -12,6 +12,8 @@ export default function Quiz() {
     };
     const { quizState, setQuizState } = useQuizStateStore();
 
+    console.log(quizState);
+
     return (
         <>
             <div className={`quiz-wrap ${quizState === 20 && "none"}`}>

@@ -41,6 +41,12 @@ header {
     }
 }
 
+header:has(+ .quiz-page) {
+    h1 {
+        color: $black;
+    }
+}
+
 .button {
     min-width: 160px;
     height: 50px;
@@ -368,9 +374,11 @@ header {
     position: relative;
     width: 55%;
     height: 40%;
+    max-height: 400px;
     padding: 40px;
     background-color: $white;
     border-radius: 24px;
+    box-shadow: 0 0 6px #00000020;
 
     h2 {
         margin-bottom: 72px;
@@ -398,7 +406,7 @@ header {
 .quiz-start--btn {
     font-family: "bnv";
     font-size: 48px;
-    color: $white;
+    color: $black;
     text-align: center;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
@@ -417,47 +425,105 @@ header {
 }
 
 .quiz-text--wrap {
-    .quiz-num {
-        margin-bottom: 24px;
-        font-family: 'p-medium';
-        font-size: 18px;
-        color: $gray;
-    }
     .quiz-text {
         width: 100%;
         margin-bottom: 60px;
         font-family: "p-bold";
         font-size: 32px;
-        color: $white;
+        color: $black;
         text-align: center;
     }
 }
 
-.quiz-text--done{
+.quiz-img--wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .quiz-num {
+        width: 100%;
+        text-align: left;
+    }
+    .quiz-title--wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 80%;
+        margin-bottom: 16px;
+        font-family: "p-bold";
+        font-size: 20px;
+        color: $black;
+        opacity: 0.7;
+        text-align: left;
+        line-height: 1.4;
+    }
+    img {
+        width: 48%;
+        height: 40%;
+        margin: 0 auto 40px;
+        border-radius: 12px;
+        box-shadow: 0 0 6px #00000040;
+    }
+    .quiz-img--btn--wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        width: 100%;
+
+        button {
+            width: 70%;
+            padding: 16px;
+            border-radius: 4px;
+            font-family: "p-medium";
+            font-size: 16px;
+            background-color: $primary;
+            color: $white;
+            opacity: 0.7;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.quiz-num {
+    margin-bottom: 24px;
+    font-family: "p-medium";
+    font-size: 18px;
+    color: $gray;
+}
+
+.quiz-text--done {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     position: relative;
 
-    p{
+    p {
         margin-bottom: 24px;
         font-family: "bnv";
         font-size: 32px;
-        color: $white;
+        color: $black;
         text-align: center;
         line-height: 1.4;
         letter-spacing: 1px;
     }
-    button{
+    button {
         border-radius: 4px;
         font-family: "p-bold";
         font-size: 16px;
-        color: $black;
+        color: $gray;
         text-align: center;
     }
 }
-
 
 .quiz-btn--wrap {
     display: flex;
@@ -474,17 +540,12 @@ header {
         width: 14%;
         cursor: pointer;
 
-        &:hover {
-            span {
-                font-size: 18px;
-            }
-        }
         &:first-child,
         &:nth-child(2) {
             span {
                 color: $secondary;
             }
-            button{
+            button {
                 border: 3px solid $secondary;
 
                 &:hover {
@@ -497,7 +558,7 @@ header {
             span {
                 color: $tertiary;
             }
-            button{
+            button {
                 border: 3px solid $tertiary;
 
                 &:hover {
@@ -524,7 +585,6 @@ header {
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background-color: #00000010;
             transition: all 0.2s ease-in-out;
         }
         span {

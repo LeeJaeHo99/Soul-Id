@@ -47,6 +47,7 @@
 
 .quiz-page{
     position: relative;
+    background-color: $white;
     
     .state-bar{
         position: absolute;
@@ -56,6 +57,11 @@
         height: 2px;
         background-color: $quaternary;
         transition: width 0.3s ease-in-out;
+    }
+    .main-title{
+        h2{
+            color: $black;
+        }
     }
 }
 
