@@ -12,6 +12,7 @@ export type SoulIdType = {
     code: string;
     animal: string;
     desc: string;
+    result: string;
 };
 
 export type ResultStore = {

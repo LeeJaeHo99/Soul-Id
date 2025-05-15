@@ -1,43 +1,60 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
+import { soulIdData } from "@/data/data";
 
 export default function QuizResult() {
-    const {SO, OP, AD, HP} = JSON.parse(localStorage.getItem("result") || "{}");
-    const result = {SO, OP, AD, HP};
-    const [result1, setResult1] = useState('');
-    console.log(result1);
+    const { SO, OP, AD, HP } = JSON.parse(
+        localStorage.getItem("result") || "{}"
+    );
+    const result = { SO, OP, AD, HP };
+    const [resultText, setResultText] = useState("");
 
     useEffect(() => {
+        let tempResult = "";
+
         if (result.SO > 0) {
-            setResult1(prev => prev += 'S');
-        }else{
-            setResult1(prev => prev += 'O');
+            tempResult += "S";
+        } else {
+            tempResult += "O";
         }
 
         if (result.OP > 0) {
-            setResult1(prev => prev += 'O');
-        }else{
-            setResult1(prev => prev += 'P');
+            tempResult += "O";
+        } else {
+            tempResult += "P";
         }
 
         if (result.AD > 0) {
-            setResult1(prev => prev += 'A');
-        }else{
-            setResult1(prev => prev += 'D');
+            tempResult += "A";
+        } else {
+            tempResult += "D";
         }
 
         if (result.HP > 0) {
-            setResult1(prev => prev += 'H');
-        }else{
-            setResult1(prev => prev += 'P');
+            tempResult += "H";
+        } else {
+            tempResult += "P";
         }
-        
-    }, [result1]);
+        setResultText(tempResult);
+    }, []);
+
+    const soulId = soulIdData.find(id => id.code === resultText);
+    console.log(soulId)
 
     return (
         <div className="quiz-result">
-            <h1>result1: {result1}</h1>
+            <h1>당신의 Soul Id</h1>
+            <h2>{soulId?.code}</h2>
+            <h3>{soulId?.animal}</h3>
+            <p>{soulId?.desc}</p>
+            <Image
+                src={`/images/animal/${resultText}.png`}
+                alt="result"
+                width={320}
+                height={320}
+            />
         </div>
     );
 }
