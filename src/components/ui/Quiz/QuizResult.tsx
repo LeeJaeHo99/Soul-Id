@@ -47,14 +47,26 @@ export default function QuizResult() {
         <div className="quiz-result">
             <h1>당신의 Soul Id</h1>
             <h2>{soulId?.code}</h2>
-            <h3>{soulId?.animal}</h3>
-            <p>{soulId?.desc}</p>
+            <p className="desc">{soulId?.desc}</p>
             <Image
                 src={`/images/animal/${resultText}.png`}
                 alt="result"
                 width={320}
                 height={320}
-            />
+                />
+            <h3>{soulId?.animal}</h3>
+            <h4>특징</h4>
+            <p className="result result-desc">{soulId?.result}</p>
+            <h4>직업 추천</h4>
+            <p className="result result-box result-desc">
+                <span>- {soulId?.job}</span>
+                <span>- {soulId?.jobReason}</span>
+            </p>
+            <h4>궁합</h4>
+            <p className="result result-box result-desc">
+                <span>- {soulId?.love}</span>
+                <span>- {soulId?.loveReason}</span>
+            </p>
         </div>
     );
 }

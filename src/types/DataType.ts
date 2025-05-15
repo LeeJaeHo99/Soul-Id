@@ -13,6 +13,10 @@ export type SoulIdType = {
     animal: string;
     desc: string;
     result: string;
+    job: string;
+    jobReason: string;
+    love: string;
+    loveReason: string;
 };
 
 export type ResultStore = {

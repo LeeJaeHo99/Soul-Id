@@ -26,7 +26,7 @@ export default function QuizPage() {
 
     return (
         <div className="quiz-page sectioin">
-            <div className="state-bar" style={{width: `${quizState / 24}%`}}></div>
+            <div className="state-bar" style={{width: `${(quizState / 27) * 100}%`}}></div>
             <div className="inner center column">
                 {isMounted && <MainTitle top="안녕하세요" bottom="곧 검사를 시작하겠습니다." />}
                 {!isMounted && isQuizNotice && <QuizNotice onClick={handleQuizNotice}/>}
